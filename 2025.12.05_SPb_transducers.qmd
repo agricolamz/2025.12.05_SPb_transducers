@@ -1,0 +1,89 @@
+---
+format: 
+  beamer:
+    theme: Singapore
+    mainfont: Brill
+    monofont: Iosevka
+    df-print: kable
+    pdf-engine: xelatex
+    cite-method: natbib
+    classoption: t
+    header-includes: |
+       \setbeamertemplate{footline}[page number]
+title: "Зачем нужен правиловый морфологический анализ в XXI веке?"
+subtitle: "Язык, текст, культура через призму цифровых технологий \n\n НИУ ВШЭ СПб \n\n 04--05 декабря 2025"
+lang: ru
+author: 
+  - name: "Г. А. Мороз НИУ ВШЭ, Москва \n\n Международная лаборатория языковой конвергенции"
+date: "12/05/2025"
+date-format: "D.MM.YYYY"
+bibliography: references.bib
+execute: 
+  echo: false
+  warning: false
+fig-align: center  
+urlcolor: teal
+citecolor: teal
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| include: false
+
+# setwd("/home/agricolamz/work/materials/2025.12.05_SPb_transducers")
+```
+
+
+# Зачем нужен морфологический анализ?
+
+## Что такое морфологический анализ
+
+Морфологический анализ, как его обычно видят лингвисты, обычно включает в себя несколько вещей:
+
+- определение морфологической формы (например, латинское *mensam* --- [acc.sg]{.smallcaps});
+- приведение к начальной форме или основе (*mensam* --- *mensa*, ж. р., первое склонение);
+- перевод основы (*mensam* --- 'стол'). \pause
+
+Не бывает правильного морфологического анализа --- это каждый раз компромисс между языковой моделью, конвенциями исследователей и текущеми задачами. Например, лингвисты, приводя примеры, редко перечисляют несловоизменительную информацию (например, род для существительных).
+
+## Зачем нужен морфологический анализ?
+
+- Польза от морфологически размеченных текстов для теоретической лингвистики неоценима \pause
+- В области NLP --- все не так однозначно:
+  - Какие-то задачи можно решить при помощи *стэминга*
+  - Выгода зависит от языка к языку
+  - Легко представить, что в некоторых задачах выгоднее иметь лишь какую-то часть морфологического анализа, например, частеречную разметку
+
+# Подходы к морфологическому анализу
+
+## Много данных
+
+Обычно, если много данных, люди используют нейросети. Для морфологического анализа русского языка их использовали в следующих работах [@arefyev18; @sorokin18; @bolshakova19a; @bolshakova19b; @bolshakova20; @garipov23]. Используются разные архитектуры:
+
+- cвёрточные нейронные сеть (convolutional neural network, CNN);
+- деревья решения с градиентным бустингом (decision trees with gradient boosting);
+- двунаправленная длинная цепь элементов краткосрочной памяти (Biderectional long short-term memory network, Bi-LSTM);
+- и другие.
+
+## hi
+
+# Морфологические трансдьюсеры
+
+## Где почитать еще?
+
+- [Онлайн материалы](https://agricolamz.github.io/2025_morphological_transducers/) нашего с Т. Казаковой курса в НИУ ВШЭ
+- [ACL Antology](https://aclanthology.org/):
+  - [morphological transducers](https://aclanthology.org/search/?q=morphological+transducers) --- около 3440 результатов
+  - [transducers](https://aclanthology.org/search/?q=morphological+transducers) --- около 6450 результатов 
+
+# {}
+
+## {}
+
+\vfill
+\centering \LARGE
+\alert{Спасибо за внимание!}
+\vfill
+
+# Ссылки на литературу
